@@ -6,52 +6,77 @@
     <link rel="stylesheet" type="text/css"  href="styles.css">
   </head>
   <body>
-    <header>
-      <h1>Javascript Basics</h1>
-    </header>
-    <nav>
-        <a href="">Home</a>
+    <div id="wrapper">
+      <header>
+        <img class="logo" src="python.png" alt="PythonLogo">
+        <div id="txtSize">
+          <p>Text Size: <a href="">Normal</a><span class="single"> | </span><a href="">Large</a><p>
+          <div id="searchBack">
+            <form>
+            <input type="text" id="search" placeholder="Search">
+            <input type="submit" value="GO" id="go">
+          </div>
+        </div>
+          </form>
+          <nav>
+            <a href="">About</a>
+            <a href="">Downloads</a>
+            <a href="">Documentation</a>
+            <a href="">Community</a>
+            <a href="">News</a>
+            <a href="">Events</a>
+          </nav>
+          </header>
+          <div id="maincontent">
+            <div id="sidebar">
+              <ul>
+                <li><a href="">Docs</a></li>
+                <li><a href="">Audio/Visual Talks</a></li>
+                <li><a href="">Beginner's Guide</a></li>
+                <li><a href="">Developer's Guide</a></li>
+                <li><a href="">PEP Index</a></li>
+                <li><a href="">Python Books</a></li>
+                <li><a href="">FAQ</a></li>
+              </ul>
+            </div>
+            <div id="mainCon">
+              <p>First Appearing in 1991, Python is a general-purpose, high level, interpreted programming language whose design focus emphasizes code readability. Where for processing/analyzing data to powering many well-known applications, Python is not aonly a great language for new programmers, but also powerfull enough for seasoned developers building whatever they can think of.</p>
+              <h3>Beautiful is better than ugly;</h3>
+              <h3>Explicit is better than implicit;</h3>
+              <h3>Simple is better than complex</h3>
+              <h3>Complex is better than complicated</h3>
+              <h3>Readability counts;</h3>
+              <h4>The Zen of Python</h4>
+            </div>
+          </div>
+    </div>
+      <div id="sub">
+      <div id="column1">
+        <h5>Getting Started</h5>
+        <p>Python can be easy to pick up whether you're a first time programmer or you're experience with other languages. The following pages are a useful first step to get on your way wrting programs with Python</p>
         <ul>
-          <li><a href="">JavaScript Overview</a></li>
-          <ul>
-            <li><a href="">Variable Declaration</a></li>
-            <li><a href="">Variable Assignment</a></li>
-            <li><a href="">Data Type</a></li>
-            <li><a href="">Conditionals</a></li>
-            <li><a href="">Loops</a></li>
-            <li><a href="">Function</a></li>
-          </ul>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Assignments</a></li>
-          <li><a href="">Quiz</a></li>
-      </ul>
-    </nav>
-    <div id="mainContent">
-      <h1>JavaScript Basics</h1>
-      <p>JavaScript is a cross-platform, object oriented scripting language. Javascript is extremely popular for a variety of reasons. It is a small and lightweight language allowing maximum flexibility for developers to take it in a bunch of different directions. Javascript lives inside a host enviroments to provide programmatic control over them</p>
-      <ul>
-        <li>
-          <a href="">Variable Declaration</a> JavaScript variables are containers for storing data values - imagine a cup you fill with coffee, the cup holds, a variable holds a value. All JavaScript variables must be identified with unique names. These unique names are called identifiers. <span class="values">var x</span>;
-        </li>
-        <li>
-          <a href="">Variable Assigment</a> Assignment operators assign values to JavaScript variables - our cup can now have coffee poured in it, giving our variable a value to old. The = assignment operator assigns a value to a variable. <span class="values">var x = 10</span>;
-        </li>
-        <li>
-          <a href ="">Data Types</a> Data types are an important concept; to be able to operate on variables you need to know the data type. There are six data types that are Javascript primitives; Boolean - <span class="values">true</span> or <span class="values">false</span>; null - <span class="values">null</span> aka nothing; Number - <span class="values">42</span> or <span class="values">3.14159</span>; String - <span class="values">'Coding Dojo Rocks!'</span>; Array - <span class="values">[1, "Coding Dojo", 2, "Dojo"]</span>; and Object - <span class="values">{first_name: "Jane", last_name: "Doe"}</span>
-        </li>
-        <li>
-          <a href="">Conditionals</a> When you write code, you want to perform different actions for different decisions - hitting different code blocks based on values or conditions that have been met. You can use conditional statements in your code to accomplish this. There are the following conditional statements: <span class="values">if</span> a specified condition is true, do this code in our code block; <span class="values">else if</span> to specify a new condition to test, if the first condition is false; <span class="values">else</span> we execute this block of code;
-        </li>
-        <li>
-          <a href="">Loops</a> There are many different kinds of loops in every programming language, but the all essentially do the same thing: they will repeat an action some number of times. Imagine you have to run a mile, well you run around the track four times and then you stop. That's a loop.
-        </li>
-        <li>
-          <a href="">Function</a> Functions are an encapsulation of a code block. When we call our function this will run that code block. Think of it as a list of instructions. As an example imagine we are putting together a desk from Ikea, we open up the instruction manual and get started, furst we screw the legs to the table top; next we place the table right way up. Done! We finished our instructions. Sadly, there are a ton more tables to do, so lets call our function over and over and over again.
-        </li>
-      </ul>
+          <li>Beginner's Guide, Programmers</li>
+          <li>Beginner's Guide, Non-Programmers</li>
+          <li>Code sample and snippets for beginners</li>
+        </ul>
+      </div>
+      <div id="column2">
+        <h5>Applications</h5>
+        <p>The <span class="highlight">Python Package Index</span> hosts thousands of third-party modules for Python. Both Python's standard library and the community contributed modules allow for endless possibilites</p>
+        <ul>
+          <li>Web and internet development</li>
+          <li>Database Access</li>
+          <li>Desktop GUIs</li>
+          <li>Network Programming</li>
+          <li>Software and Game Development</li>
+        </ul>
+      </div>
     </div>
     <footer>
-      <p>For more useful information check out this url: <a href="">JavaScript!</a>
+      <a href="">Help and General Contact</a>
+      <a href="">Diversity Initiatives</a>
+      <a href="">Submit Website Bugs</a>
+      <p>Copyright 2001-2016</p>
     </footer>
   </body>
 </html>
