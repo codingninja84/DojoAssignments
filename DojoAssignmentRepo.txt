@@ -1,0 +1,17 @@
+I created a new repo called DojoAssignments
+Opened the terminal using CMD and then git command
+Used cd Desktop/DojoAssignments to nav
+Initialized a repo using git init
+Then...
+
+1.git add .
+2.git commit -m ""
+3.git remote add origin https://github.com/codingninja84/DojoAssignments.git
+4.git push -u origin master
+
+git copy NUL readme.md
+repeated the above steps 1-4
+made a readme
+repeated 1-4 again
+
+

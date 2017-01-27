@@ -1,0 +1,173 @@
+
+
+body {
+  width : 970px;
+  font-family: sans-serif;
+}
+
+#logo{
+  height: 120px;
+  width : 120px;
+}
+
+#tagline {
+  display: inline-block;
+  vertical-align: top;
+  color : #5e5e5e;
+  margin-top: 40px;
+  font-size: 44px;
+}
+
+.net {
+  color : #6B97BD;
+}
+
+#topBar {
+  background-color: #2C6BA1;
+  color: #F7F9FB;
+  padding: 1px 0px 1px 20px;
+  margin-top: -25px;
+}
+
+#sidebar {
+  width : 210px;
+  font-weight: bold;
+  font-size: 15px;
+  display: inline-block;
+}
+
+#btn1 {
+   height: 30px;
+   background-color: #3473A8;
+   font-size: 16px;
+   font-weight: bold;
+   color: #f7f7f7;
+   border : none;
+   border-radius: 5px;
+   display: block;
+   width : 210px;
+   margin-bottom: 5px;
+}
+
+#btn2 {
+  height: 30px;
+  background-color: #EE8701;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f9f9f9;
+  border : none;
+  border-radius: 5px;
+  display : block;
+  width : 210px;
+}
+
+.ad {
+  background-image: url(ad_background.png);
+  height: 300px;
+  color: white;
+  text-align: center;
+}
+
+
+.ninja {
+   height: 124;
+   width: 90px;
+}
+
+#btn3 {
+  padding : 5px 15px;
+  background-color: #00C3DF;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f9f9f9;
+  border : none;
+  border-radius: 5px;
+  display : block;
+  width : 170px;
+  margin : 10px 0px 0px 20px;
+}
+
+.home {
+  display: inline-block;
+  height : 30px;
+  width: 30px;
+}
+
+.mainCon {
+  display: inline-block;
+}
+
+.mainTop {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 0px 20px 50px;
+  padding-bottom: 10px;
+  width: 700px;
+}
+
+.left {
+  display: inline-block;
+  width: 450px;
+  vertical-align: top;
+
+}
+
+.dns {
+  display: inline-block;
+  position: relative;
+  bottom: 4px;
+  font-weight: bold;
+  color: #22659E;
+}
+.phone {
+  display: inline-block;
+}
+.right {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  font-size: 12px;
+}
+
+.contact {
+  vertical-align: top;
+  margin : 0;
+}
+
+#tollFree {
+  color : #4BCCE2;
+  font-size: 24px;
+}
+
+.main {
+  display: inline-block;
+  border-top: 1px solid #3e3e3e;
+}
+
+.server {
+  height: 73px;
+  width : 200px;
+  margin: 10px 200px;
+}
+
+.box img {
+  display: inline-block;
+  height : 100px;
+  vertical-align: top;
+  margin-top: 13px;
+}
+
+.box {
+  padding: 10px;
+  border: 5px solid #4BCCE2;
+}
+
+.boxText {
+  display: inline-block;
+  width: 550px;
+  vertical-align: top;
+}
+
+h4 {
+  color: #3473A8;
+}
