@@ -1,0 +1,37 @@
+* {
+  outline: 2px dotted red;
+}
+
+
+.ib {
+  display : inline-block;
+}
+
+nav {
+  display: inline-block;
+  margin-left: 50px;
+  font-size: 20px;
+  width: 550px;
+}
+
+nav a {
+  padding: 0px 10px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.logo {
+  width : 270px;
+  display: inline-block;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #153F43;
+}
+
+header {
+  width : 970px;
+}
