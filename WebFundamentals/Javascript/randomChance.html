@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Chance</title>
+    <script type="text/javascript">
+      "use strict";
+      //100 Games
+      var qtrs = 100;
+      function randomChance(qtrs){
+
+
+        while (qtrs > 0) {
+          var winningNum = Math.floor(Math.random() * 20)
+          if (winningNum === 15) {
+            return qtrs + Math.floor(50 + Math.random() * 50);
+          }
+          console.log(qtrs);
+          qtrs--;
+       }
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
