@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Numbers Only</title>
+    <script type="text/javascript">
+      "use sctrict";
+
+      var arr = [1, true, "Three", 4, false, null, 5]
+
+      function numOnly(arr){
+        var newArr = [];
+
+        for (var i = 0; i < arr.length; i++) {
+          if (typeof arr[i] === "number") {
+            newArr.push(arr[i]);
+          }
+        }
+        return newArr;
+      }
+      console.log(numOnly(arr));
+
+var arr2 = ["One", true, "Three", 4, false, null, 5]
+
+      function remove(arr){
+        for (var i = 0; i < arr.length; i++) {
+          if (typeof arr[i] === "number") {
+            arr.splice(i, 1);
+          }
+        }
+        console.log(arr);
+      };
+
+      console.log(remove(arr2));
+    </script>
+  </head>
+  <body>
+    <h1>Check the console!</h1>
+  </body>
+</html>
