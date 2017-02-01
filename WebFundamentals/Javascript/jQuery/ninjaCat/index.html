@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Cat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('img').click(function(){
+        var $this = $(this);
+        var altPic = $(this).attr('data-alt-src');
+        var mainPic = $this.attr('src');
+        $this.attr('src', altPic);
+        $this.attr('data-alt-src', mainPic);
+
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <div class="main">
+
+    <img src='ninja0.png' data-alt-src='cat0.png' class="dis" />
+    <img src='ninja1.png' data-alt-src='cat1.png' class="dis" />
+    <img src='ninja2.png' data-alt-src='cat2.png' class="dis" />
+    <img src='ninja3.png' data-alt-src='cat3.png' class="dis" />
+    <img src='ninja4.png' data-alt-src='cat4.png' class="dis" />
+  </div>
+  </body>
+</html>

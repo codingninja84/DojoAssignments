@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Functions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+
+        $('.row2 img').hide(0);
+        $(".hContent").hide(0);
+        $(".r4h3").hide(0);
+        $('.main').hide(0);
+        $('header').hide(0);
+        $('.welcome').show();
+        $('.welcome').hover(function(){
+          $('.welcome').text("Click to enter!")
+        })
+        $('.welcome').click(function(){
+          $('.welcome').hide();
+          $('.main, header').fadeIn(3000);
+          $('.hContent').slideDown(1000);
+          $('header p').html("<h1>Welcome!</h1>")
+        })
+        $('.bt1').click(function(){
+          $('.row1').css({"width" : "auto" })
+          $('.bt1').fadeOut(2000).promise().done(function(){$('.row1 p').fadeIn(2000).promise().done(function(){$('.row1 p').css("color", "red")})})
+          $('.row1 p').fadeIn(4000).promise().done(function(){$('.row1 p').css("color", "red")})
+        })
+
+        $('.bt2').click(function(){
+          $('.row2').css({"width" : "auto" });
+            $('.row2 img').slideToggle();
+        })
+
+        $('.bt3').click(function(){
+          $('.row3').css({"width" : "auto" })
+          $(".bt3").click(function(){
+            $('.ap').append("Here is append in action! ")
+          })
+        })
+        $('.bt4').click(function(){
+          $('.row4').css({"width" : "auto" })
+          $('.bt4').fadeOut(2000).promise().done(function(){
+            $('.row4 h3').show();
+            $('.row4 h3').click(function(){
+              $('.row4 h3').hide();
+              alert("Your text is gone!")
+            })
+          })
+        })
+        $('.bt5').click(function(){
+          $('.row5').css({"width" : "auto" })
+          $('.bt5').before("<h4>New Text Before The Button!");
+        })
+        $('.bt6').click(function(){
+          $('.row6').css({"width" : "auto" })
+          $('.bt6').after("<h4>New Text AFTER The Button!");
+        })
+        $('.bt7').click(function(){
+          $('.row7').css({"width" : "auto" })
+          $('.row7').html("<h4>New html</h4>");
+        })
+        $('.bt8').click(function(){
+          $('.row8').css({"width" : "auto" })
+          var output = $('form').val();
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <p>Click Here to view my jQuery basic assignment!</p>
+        <div class="hContent">
+          <h1 class="ib nav"><a href="#"><</a></h1>
+          <h1 class="ib nav"><a href="#">></a></h1>
+          <h1 class="ib back"><a href="#">X</a></h1>
+          <input type="search" name="" class="ib search" value="Search">
+        </div>
+    </header>
+    <div class="main">
+      <div class=" row row1">
+        <h1 class="bl">AddClass</h1>
+        <p>Clicking the button add red to this paragraph</p>
+        <button type="button" name="button" class="bt1 ib">AddClass</button>
+      </div>
+      <div class="row row2">
+        <h1 class="bl">Slidetoggle</h1>
+        <button type="button" name="button" class="bt2 ib">Slidetoggle</button>
+        <div class="r3img">
+
+          <img src="puppies.png" alt="puppies">
+        </div>
+      </div>
+      <div class="row row3">
+        <h1 class="bl">Append</h1>
+        <button type="button" name="button" class="bt3 ib">Append</button>
+        <h3 class="ap"></h3>
+      </div>
+      <div class="row row4">
+        <h1 class="bl">Hide</h1>
+        <button type="button" name="button" class="bt4 ib">Hide</button>
+        <h3 class="r4h3">Here is text. Click Me!</h3>
+      </div>
+      <div class="row row5">
+        <h1 class="bl">Before</h1>
+        <button type="button" name="button" class="bt5 ib">Before</button>
+      </div>
+      <div class="row row6">
+        <h1 class="bl">After</h1>
+        <button type="button" name="button" class="bt6 ib">After</button>
+        <h3 class="ap"></h3>
+      </div>
+      <div class="row row7">
+        <h1 class="bl">html</h1>
+        <button type="button" name="button" class="bt7 ib">Replace html</button>
+        <h3 class="ap"></h3>
+      </div>
+    </div>
+    <button type="button" name="button" class="welcome">Welcome!</button>
+  </body>
+</html>
