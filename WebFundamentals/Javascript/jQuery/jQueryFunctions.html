@@ -14,7 +14,7 @@
         $('.row2 img').hide(0);
         $(".hContent").hide(0);
         $(".r4h3").hide(0);
-        $('.main').hide(0);
+        $('.main, .sideBar').hide(0);
         $('header').hide(0);
         $('.welcome').show();
         $('.welcome').hover(function(){
@@ -22,14 +22,14 @@
         })
         $('.welcome').click(function(){
           $('.welcome').hide();
-          $('.main, header').fadeIn(3000);
+          $('.main, header, .sideBar').fadeIn(3000);
           $('.hContent').slideDown(1000);
           $('header p').html("<h1>Welcome!</h1>")
         })
         $('.bt1').click(function(){
           $('.row1').css({"width" : "auto" })
-          $('.bt1').fadeOut(2000).promise().done(function(){$('.row1 p').fadeIn(2000).promise().done(function(){$('.row1 p').css("color", "red")})})
-          $('.row1 p').fadeIn(4000).promise().done(function(){$('.row1 p').css("color", "red")})
+          $('.bt1').fadeOut(2000).promise().done(function(){$('.row1 p').fadeIn(2000).promise().done(function(){$('.row1 p').css({"color" : "#303030", "font-size" : "20px"})})})
+          $('.row1 p').fadeIn(4000).promise().done(function(){$('.row1 p').css("color", "#808080")})
         })
 
         $('.bt2').click(function(){
@@ -69,6 +69,9 @@
           $('.row8').css({"width" : "auto" })
           var output = $('form').val();
         })
+        $('.search').click(function(){
+          $(this).css({"background-color" : "#3e3e3e", "color" : "white"})
+        })
       });
     </script>
   </head>
@@ -85,7 +88,7 @@
     <div class="main">
       <div class=" row row1">
         <h1 class="bl">AddClass</h1>
-        <p>Clicking the button add red to this paragraph</p>
+        <p>Clicking the button changed this paragraph to black</p>
         <button type="button" name="button" class="bt1 ib">AddClass</button>
       </div>
       <div class="row row2">
@@ -113,14 +116,17 @@
       <div class="row row6">
         <h1 class="bl">After</h1>
         <button type="button" name="button" class="bt6 ib">After</button>
-        <h3 class="ap"></h3>
       </div>
       <div class="row row7">
         <h1 class="bl">html</h1>
         <button type="button" name="button" class="bt7 ib">Replace html</button>
-        <h3 class="ap"></h3>
       </div>
     </div>
     <button type="button" name="button" class="welcome">Welcome!</button>
+    <div class="sideBar">
+      <h1>jQuery Functions!</h1>
+      <p>I'm learning some pretty cool stuff!</p>
+      <button type="button" name="button" class="ib sb">Reset Page</button>
+    </div>
   </body>
 </html>

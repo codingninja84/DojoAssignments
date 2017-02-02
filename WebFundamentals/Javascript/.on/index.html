@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+     <link rel="stylesheet" href="styles.css">
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        // $('.btn').click(function(){
+          $('.info').submit(function(){
+            var first = $("#firstN").val();
+            var last = $("#last").val();
+            var email = $("#email").val();
+            var contact = $("#contact").val();
+
+            // $(document).on(function(){
+              $('table').append('<tr><td>'+ first +'</td><td>' + last + '</td><td>'+ email +'</td><td>' + contact + '</td>')
+              return false;
+            // });
+
+          });
+      });
+
+    </script>
+  </head>
+  <body>
+    <table class="highlight">
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email Address</th>
+      <th>Contact Number</th>
+    </table>
+    <form class="info z-depth-3" action="index.html" method="post">
+      First Name <input type="text" id="firstN" name="first" value="" class="z-depth-3">
+      Last Name <input type="text" id="last" name="last" value="">
+      Email <input type="text" id="email" name="middle" value="">
+      Contact <input type="text" id="contact" name="contact" value="">
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </body>
+</html>

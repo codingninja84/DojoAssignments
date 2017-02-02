@@ -1,0 +1,51 @@
+
+* {
+  outline : none;
+}
+
+body {
+  width : 970px;
+  color : #303030;
+}
+
+.left {
+  width : 480px;
+  display: inline-block;
+}
+
+.right {
+  width : 480px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.db {
+  display : block;
+  margin: 10px;
+}
+
+.cards {
+  width : 300px;
+  height : 150px;
+  font-size: 25px;
+  padding-top: 15px;
+  border: 2px solid tomato;
+  border-radius: 5px;
+  color : #808080;
+}
+
+button {
+  display: block;
+  width : 298px;
+  background-color: tomato;
+  font-size : 16px;
+  padding: 10px;
+  margin-top: 40px;
+  color: white;
+}
+
+p {
+color : #808080;
+
+}

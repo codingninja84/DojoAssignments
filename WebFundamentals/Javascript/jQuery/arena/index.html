@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fight!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('.bh1').hide();
+
+        $('#bt1').hover(function(){
+          $('#wrapper').css({'background-image' : 'url("dojo_arena_photos/beach.jpg")', "background-repeat" : "no-repeat",  "background-size" : "100% 900px"});
+
+          $('#bt1').click(function(){
+            $('.menu').slideUp().promise().done(function(){
+              $('.bh1').show().promise().done(function(){
+                $(this).fadeOut(1000).promise().done(function(){
+                  $('.playerNav').show();
+                })
+              })
+            })
+          })
+
+        });
+        $('#bt2').hover(function(){
+          $('#wrapper').css({'background-image' : 'url("dojo_arena_photos/earth.jpg")', "background-repeat" : "no-repeat",  "background-size" : "100% 900px;"});
+
+          $('#bt2').click(function(){
+          $('.menu').slideUp().promise().done(function(){
+            $('.bh2').show().promise().done(function(){
+              $(this).fadeOut(1000).promise().done(function(){
+                $('.playerNav').show();
+              })
+            })
+            })
+          })
+        });
+        $('#bt3').hover(function(){
+          $('#wrapper').css({'background-image' : 'url("dojo_arena_photos/dojo.jpg")', "background-repeat" : "no-repeat",  "background-size" : "100% 900px"});
+
+          $('#bt3').click(function(){
+          $('.menu').slideUp().promise().done(function(){
+            $('.bh3').show().promise().done(function(){
+              $(this).fadeOut(1000).promise().done(function(){
+                $('.playerNav').show();
+              });
+            })
+            })
+          })
+        });
+        $('#bt4').hover(function(){
+          $('#wrapper').css({'background-image' : 'url("dojo_arena_photos/forest.jpg")', "background-repeat" : "no-repeat",  "background-size" : "100% 900px"});
+
+          $('#bt4').click(function(){
+          $('.menu').slideUp().promise().done(function(){
+            $('.bh4').show().promise().done(function(){
+              $(this).fadeOut(1000).promise().done(function(){
+                $('.playerNav').show();
+              });
+              })
+            })
+          })
+        });
+        $('#bt5').hover(function(){
+          $('#wrapper').css({'background-image' : 'url("dojo_arena_photos/matrix.jpg")', "background-repeat" : "no-repeat",  "background-size" : "100% 900px"});
+
+          $('#bt5').click(function(){
+          $('.menu').slideUp().promise().done(function(){
+            $('.bh5').show().promise().done(function(){
+              $(this).fadeOut(1000).promise().done(function(){
+                $('.playerNav').show();
+              });
+            })
+          })
+          })
+        });
+        $('#bt6').hover(function(){
+          $('#wrapper').css({'background-image' : 'url("dojo_arena_photos/snow.jpg")', "background-repeat" : "no-repeat",  "background-size" : "100% 900px"});
+
+          $('#bt6').click(function(){
+          $('.menu').slideUp().promise().done(function(){
+            $('.bh6').show().promise().done(function(){
+              $(this).fadeOut(1000).promise().done(function(){
+                $('.playerNav').show();
+              });
+            })
+          })
+          })
+        });
+
+        $("form").submit(function(){
+          var player1 = $("select.player1").val()
+          var player2 = $("select.player2").val();
+
+          $('#fightLeft').append('<img src="dojo_arena_photos/' + player1 + '.png">');
+          $('#fightRight').append('<img src="dojo_arena_photos/' + player2 + '.png">');
+          $('.playerNav').slideUp().promise().done(function(){
+            $('.fightArea').show();
+            $('.mainArea').append("<h1>FIGHT!!!!</h1>").fadeOut(1000)
+          })
+          return false;
+        });
+
+      });
+        </script>
+  </head>
+  <body id="wrapper">
+    <div class="menu">
+      <h1>Select Arena</h1>
+      <button type="button" class="btn" id="bt1" name="button">Beach</button>
+      <button type="button" class="btn" id="bt2" name="button">Planet</button>
+      <button type="button" class="btn" id="bt3" name="button">Dojo</button>
+      <button type="button" class="btn" id="bt4" name="button">Forest</button>
+      <button type="button" class="btn" id="bt5" name="button">Matrix</button>
+      <button type="button" class="btn" id="bt6" name="button">Snow</button>
+    </div>
+    <div class="images">
+      <img src="dojo_arena_photos/beach.jpg" alt="beach" class="back beach">
+      <img src="dojo_arena_photos/dojo.jpg" alt="" class="back dojo">
+      <img src="dojo_arena_photos/matrix.jpg" alt="" class="back matrix">
+      <img src="dojo_arena_photos/snow.jpg" alt="" class="back snow">
+      <img src="dojo_arena_photos/earth.jpg" alt="" class="back earth">
+      <img src="dojo_arena_photos/forest.jpg" alt="" class="back forest">
+    </div>
+    <div class="loc">
+      <h1 class="location bh1">BEACH!!</h1>
+      <h1 class="location bh2">PLANET!!</h1>
+      <h1 class="location bh3">DOJO!!</h1>
+      <h1 class="location bh4">FOREST!!</h1>
+      <h1 class="location bh5">MATRIX!!</h1>
+      <h1 class="location bh6">SNOW!!</h1>
+    </div>
+    <div class="playerNav">
+      <h1>Select Players</h1>
+      <form class="" action="index.html" method="post">
+      <select class="players player1" name="player1" onselect="setplayer1();">
+        <option value="mikey">Mikey</option>
+        <option value="raphael">Raphael</option>
+        <option value="leo">Leonardo</option>
+        <option value="donny">Donatello</option>
+      </select>
+      <select class="players player2" name="player2">
+        <option value="mikey" id="mike">Mikey</option>
+        <option value="raphael">Raphael</option>
+        <option value="leo">Leonardo</option>
+        <option value="donny">Donatello</option>
+        <input type="submit" class="submit" name="submit" value="submit">
+      </select>
+    </form>
+    </div>
+    <div  class="fightArea" id="fightLeft">
+    </div>
+    <div  class="fightArea" id="fightRight">
+    </div>
+    <div class="mainArea">
+    </div>
+  </body>
+</html>

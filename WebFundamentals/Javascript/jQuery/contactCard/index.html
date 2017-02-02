@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        function cards(first, last, description){
+
+          var cardback = "<h3 class='test'>" + description + "</h3>"
+          var btn = '<button type="button" name="button" class="btn1">Click for description</button>'
+          var newCard = '<div class="cards"><p>' + first + " " + last + cardback +  "</p>" + btn + '</div>';
+          $(".right").append(newCard);
+          $('.test').hide();
+        }
+
+        $('.contact').submit(function(){
+
+          var first = $('.first').val();
+          var last = $('.last').val();
+          var description = $('.area').val();
+          cards(first, last, description);
+          return false;
+        });
+
+        $(document).on("click", ".btn1", function(){
+          $('.cards p').slideUp();
+          $('.test').slideDown();
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <div class="left">
+      <form class="contact" action="index.html" method="post">
+        First Name: <input type="text" name="first" value="" class="db first">
+        Last Name: <input type="text" name="last" value="" class="db last">
+        <label for="description">Description</label>
+        <textarea name="description" rows="8" cols="50" class="db area"></textarea>
+        <input type="submit" name="Submit" value="Add User" class=" btn db">
+      </form>
+    </div>
+    <div class="right">
+    </div>
+  </body>
+</html>
